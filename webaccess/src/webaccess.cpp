@@ -515,7 +515,13 @@ void WebAccess::slotHandleWebSocketRequest(QHttpConnection *conn, QString data)
         else if (apiCmd == "getFunctionsList")
         {
             foreach(Function *f, m_doc->functions())
-                wsAPIMessage.append(QString("%1|%2|").arg(f->id()).arg(f->name()));
+            {
+                wsAPIMessage.append(QString("%1|%2|%3|").arg(f->id()).arg(f->name()).arg(f->typeString()));
+                if (f->isRunning())
+                    wsAPIMessage.append("running|");
+                else
+                    wsAPIMessage.append("stopped|");
+            }
             // remove trailing separator
             wsAPIMessage.truncate(wsAPIMessage.length() - 1);
         }
