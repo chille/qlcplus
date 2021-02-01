@@ -307,19 +307,19 @@ void FunctionManager::initToolbar()
     m_toolbar->addAction(m_addEFXAction);
     m_toolbar->addAction(m_addCollectionAction);
     m_toolbar->addAction(m_addRGBMatrixAction);
-    m_toolbar->addAction(m_addScriptAction);
-    m_toolbar->addAction(m_addAudioAction);
+//    m_toolbar->addAction(m_addScriptAction);
+//    m_toolbar->addAction(m_addAudioAction);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-    m_toolbar->addAction(m_addVideoAction);
+//    m_toolbar->addAction(m_addVideoAction);
 #endif
     m_toolbar->addSeparator();
     m_toolbar->addAction(m_addFolderAction);
-    m_toolbar->addSeparator();
-    m_toolbar->addAction(m_autostartAction);
-    m_toolbar->addAction(m_wizardAction);
+//    m_toolbar->addSeparator();
+//    m_toolbar->addAction(m_autostartAction);
+//    m_toolbar->addAction(m_wizardAction);
     m_toolbar->addSeparator();
     m_toolbar->addAction(m_cloneAction);
-    m_toolbar->addSeparator();
+//    m_toolbar->addSeparator();
     m_toolbar->addAction(m_deleteAction);
 }
 
